@@ -8,7 +8,7 @@ const links = [
     { name: 'Login', href: '/login'},
     {
       name: 'Characters',
-      href: '/characters'
+      href: '/dashboard/characters'
     },
     { name: 'Episodes', href: '/episodes'},
   ];
