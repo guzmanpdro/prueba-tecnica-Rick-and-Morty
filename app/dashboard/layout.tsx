@@ -6,7 +6,7 @@ export default function AppLayout({ children, }: { children: React.ReactNode }) 
             <div className="w-full flex-none md:w-64">
                 <Sidebar />
             </div>
-            <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+            <main className="bg-neutral-800 flex-grow p-6 md:overflow-y-auto md:p-12">{children}</main>
         </div>
     )
 }
