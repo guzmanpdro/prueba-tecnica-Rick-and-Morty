@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SidebarLogo from "../ui/sidebar-logo";
 import NavLinks from "./nav-link";
+import { signOut } from "@/auth";
 
 export default function Sidebar() {
     return (
@@ -16,6 +17,16 @@ export default function Sidebar() {
             <nav className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
                 <NavLinks />
                 <div className="hidden h-auto w-full grow rounded-md bg-gray-200 md:block"></div>
+                <form
+                    action={async () => {
+                        'use server';
+                        await signOut();
+                    }}
+                    >
+                    <button className="w-full text-start h-[48px] rounded-md bg-neutral-200 hover:bg-neutral-300 p-3 text-sm font-medium md:p-2 md:px-3">
+                        Sign Out
+                    </button>
+                </form>
             </nav>
         </aside>
     );
