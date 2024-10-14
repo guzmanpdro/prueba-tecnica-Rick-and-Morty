@@ -1,5 +1,7 @@
 export default function DashboardPage() {
     return (
-        <p>Simple page</p>
+        <section className="h-full grid place-content-center text-neutral-100 text-center text-xl md:text-3xl">
+            <h1>Consulta personajes y episodios desde el menú.</h1>
+        </section>
     )
 }
