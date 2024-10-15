@@ -5,7 +5,7 @@ export type User = {
     password: string;
   };
 
-export type Characters = {
+export type DataCharacters = {
   characters: {
     id: number;
     name: string;
@@ -23,6 +23,18 @@ export type Characters = {
     };
     image: string;
     episode: string[];
+    url: string;
+    created: string;
+  }[],
+}
+
+export type DataEpisodes = {
+  episodes: {
+    id: number;
+    name: string;
+    air_date: string;
+    episode: string;
+    characters: string[];
     url: string;
     created: string;
   }[]

@@ -4,16 +4,16 @@ import {
     TableCell
 } from "@/components/ui/table";
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { Characters } from '@/lib/definitions'
+import { DataCharacters } from '@/lib/definitions'
 
-export default function CharacterTableBody({ characters }: Characters) {
+export default function CharacterTableBody({ characters }: DataCharacters) {
     return (
         <TableBody>
             {
                 characters.map(character => {
-                    const { image, name, species, gender } = character
+                    const { id, image, name, species, gender } = character
                     return (
-                    <TableRow>
+                    <TableRow key={id}>
                         <TableCell>
                             <Avatar>
                                 <AvatarImage src={image} />

@@ -4,15 +4,13 @@ import {
     TableHead
 } from "@/components/ui/table"
 
-const headers = ['Imágen', 'Nombre', 'Especie', 'Género'];
-
-export default function TableHeaders() {
+export default function TableHeaders({ headers }: any) {
     return (
         <TableHeader>
             <TableRow>
                 {
-                    headers.map(header => (
-                        <TableHead>{header}</TableHead>
+                    headers.map((header: any) => (
+                        <TableHead key={header}>{header}</TableHead>
                     ))
                 }
             </TableRow>

@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx';
 
 const links = [
-    { name: 'Login', href: '/login'},
     {
       name: 'Characters',
       href: '/dashboard/characters'
     },
-    { name: 'Episodes', href: '/episodes'},
+    { name: 'Episodes', 
+      href: '/dashboard/episodes'
+    },
   ];
   
   export default function NavLinks() {
