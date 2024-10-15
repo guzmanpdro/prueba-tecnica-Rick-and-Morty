@@ -39,3 +39,7 @@ export type DataEpisodes = {
     created: string;
   }[]
 }
+
+export type Headers = {
+  headers: string[];
+}
